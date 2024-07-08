@@ -1,0 +1,82 @@
+<!--
+학번 : 202214082
+이름 : 이길수
+과제명 : hw7_1.html
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+      .content {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .ui-icon-my-icon:after {
+        background: url("buttonicon1.png");
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-role="page" id="page1">
+      <div data-role="header" class="header" data-position="fixed">
+        <h1>첫번째 페이지</h1>
+        <a href="#page2" class="ui-btn-right">다음</a>
+      </div>
+      <div data-role="content" class="content">
+        <a href="#" data-role="button" data-inline="true">버튼1</a>
+        <a href="#" data-role="button" data-icon="my-icon">버튼2</a>
+        <button data-icon="search" data-iconpos="right">버튼3</button>
+      </div>
+      <div
+        data-role="footer"
+        class="ui-bar"
+        data-fullscreen="true"
+        data-position="fixed"
+      >
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#">버튼4</a>
+          <a href="#">버튼5</a>
+        </div>
+      </div>
+    </div>
+    <div data-role="page" id="page2">
+      <div data-role="header" class="header" data-position="fixed">
+        <h1>두번째 페이지</h1>
+      </div>
+      <div data-role="content" class="content">
+        <ul
+          data-role="listview"
+          data-inset="true"
+          data-divider-theme="e"
+          data-filter="true"
+          data-filter-placeholder="검색키워드를 입력하세요"
+        >
+          <li data-role="listdivider">박물관 종류</li>
+          <li><a href="#">자연사박물관</a></li>
+          <li>
+            <a href="#">공룡박물관<span class="ui-li-count">5</span></a>
+          </li>
+        </ul>
+      </div>
+      <div data-role="footer" data-fullscreen="true" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#" data-icon="plus">추가</a></li>
+            <li><a href="#" data-icon="minus">삭제</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
